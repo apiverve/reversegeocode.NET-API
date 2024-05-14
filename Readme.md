@@ -70,20 +70,21 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```
-var queryOptions = new QueryOptions {
+var queryOptions = new reversegeocodeQueryOptions {
   lat = 40.714224,
-  long = -73.961452
+  lon = -73.961452
 };
 ```
 
 ###### Simple Request
 
 ```
-var response = apiClient.execute(queryOptions);
+var response = apiClient.Execute(queryOptions);
 if(response.error != null) {
 	Console.WriteLine(response.error);
 } else {
-    Console.WriteLine(response);
+    var jsonResponse = JsonConvert.SerializeObject(response.data, Newtonsoft.Json.Formatting.Indented);
+    Console.WriteLine(jsonResponse);
 }
 ```
 
