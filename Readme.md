@@ -70,7 +70,7 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```
-var queryOptions = new reversegeocodeQueryOptions {
+var queryOptions = new ReverseGeocodeQueryOptions {
   lat = 40.714224,
   lon = -73.961452
 };
@@ -115,7 +115,8 @@ if(response.error != null) {
       "Brooklyn Center",
       "Brooklyn Heights"
     ]
-  }
+  },
+  "code": 200
 }
 ```
 
