@@ -4,66 +4,67 @@ using Newtonsoft.Json;
 
 namespace APIVerve
 {
-public class data
-{
-    [JsonProperty("zipcode")]
-    public string zipcode { get; set; }
+    /// <summary>
+    /// Data data
+    /// </summary>
+    public class Data
+    {
+        [JsonProperty("zipcode")]
+        public string Zipcode { get; set; }
 
-    [JsonProperty("state_abbr")]
-    public string stateabbr { get; set; }
+        [JsonProperty("state_abbr")]
+        public string Stateabbr { get; set; }
 
-    [JsonProperty("city")]
-    public string city { get; set; }
+        [JsonProperty("city")]
+        public string City { get; set; }
 
-    [JsonProperty("state")]
-    public string state { get; set; }
+        [JsonProperty("state")]
+        public string State { get; set; }
 
-    [JsonProperty("distance")]
-    public double distance { get; set; }
+        [JsonProperty("distance")]
+        public double Distance { get; set; }
 
-    [JsonProperty("latitudeClosest")]
-    public string latitudeClosest { get; set; }
+        [JsonProperty("latitudeClosest")]
+        public string LatitudeClosest { get; set; }
 
-    [JsonProperty("longitudeClosest")]
-    public string longitudeClosest { get; set; }
+        [JsonProperty("longitudeClosest")]
+        public string LongitudeClosest { get; set; }
 
-    [JsonProperty("countryCode")]
-    public string countryCode { get; set; }
+        [JsonProperty("countryCode")]
+        public string CountryCode { get; set; }
 
-    [JsonProperty("latitudeClosestCity")]
-    public object latitudeClosestCity { get; set; }
+        [JsonProperty("latitudeClosestCity")]
+        public object LatitudeClosestCity { get; set; }
 
-    [JsonProperty("longitudeClosestCity")]
-    public object longitudeClosestCity { get; set; }
+        [JsonProperty("longitudeClosestCity")]
+        public object LongitudeClosestCity { get; set; }
 
-    [JsonProperty("latitude")]
-    public double latitude { get; set; }
+        [JsonProperty("latitude")]
+        public double Latitude { get; set; }
 
-    [JsonProperty("longitude")]
-    public double longitude { get; set; }
+        [JsonProperty("longitude")]
+        public double Longitude { get; set; }
 
-    [JsonProperty("estimatedCity")]
-    public bool estimatedCity { get; set; }
+        [JsonProperty("estimatedCity")]
+        public bool EstimatedCity { get; set; }
 
-    [JsonProperty("nearestCities")]
-    public string[] nearestCities { get; set; }
+        [JsonProperty("nearestCities")]
+        public string[] NearestCities { get; set; }
 
-}
+    }
+    /// <summary>
+    /// API Response object
+    /// </summary>
+    public class ResponseObj
+    {
+        [JsonProperty("status")]
+        public string Status { get; set; }
 
-public class ResponseObj
-{
-    [JsonProperty("status")]
-    public string status { get; set; }
+        [JsonProperty("error")]
+        public object Error { get; set; }
 
-    [JsonProperty("error")]
-    public object error { get; set; }
+        [JsonProperty("data")]
+        public Data Data { get; set; }
 
-    [JsonProperty("data")]
-    public data data { get; set; }
-
-    [JsonProperty("code")]
-    public int code { get; set; }
-
-}
-
+    }
 }
